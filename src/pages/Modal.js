@@ -23,8 +23,8 @@ const Modal = () => {
     },[])
   return (
     <>
-        <div className='md:ml-24 flex lg:flex-row md:flex-row lg:gap-20 md:gap-5 sm:flex-col'>
-      <div className='absolute w-[100px] min-h-screen bg-gradient-to-r from-black'></div>
+        <div className='md:ml-24 flex lg:flex-row md:flex-row sm:flex flex-col lg:gap-20 md:gap-5 '>
+      <div className='absolute lg:w-[100px] md:w-[100px] sm:w-0  min-h-screen bg-gradient-to-r from-black '></div>
        <img className=' lg:w-2/6 object-cover  md:w-2/5' src={`https://image.tmdb.org/t/p/original/${item?.poster_path}`}></img>
        <div className='flex flex-col gap-10'>
        <h1 className='text-white font-bold text-[50px] '>{item?.original_title}</h1>
