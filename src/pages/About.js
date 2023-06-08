@@ -48,7 +48,7 @@ const About = () => {
   return (
     <div onChange={handleChange} className='ml-24 flex justify-center'>
       <input className='absolute m-10 rounded-full w-3/5 bg-gray-700 h-[50px] p-5 text-white' placeholder='Search a movie'></input>
-      <div className='ml-14 mt-[200px]'>
+      <div className='lg:ml-14 md:ml-14 sm:ml-14 mt-[200px]'>
         {
           movies.map((item)=>{
             {return(<Movie id={item.id} key={item.id} item={item}></Movie>)}

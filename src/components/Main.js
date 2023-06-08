@@ -10,12 +10,13 @@ const Main = () => {
         
     },[])
     // console.log(movies)
+  
 
     const singleMovie = movies[Math.floor(Math.random()*movies.length)]
-
+    
   return (
-    <div className='w-full h-[550px] bg-black'>
-        <div className='ml-24 w-full h-full '>
+    <div className='lg:w-full md:w-full sm:w-full h-[400px] lg:h-[550px] md:h-[550px] sm:h-[550px] bg-black'>
+        <div className='lg:ml-24 w-full h-full md:m-0'>
         <div className='absolute w-[250px] h-[550px] bg-gradient-to-r from-black'></div>
         <img className=' w-full h-full object-cover'src={`https://image.tmdb.org/t/p/original/${singleMovie?.backdrop_path}`} alt={singleMovie?.title}/>
         </div>

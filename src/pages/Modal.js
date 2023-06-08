@@ -11,7 +11,8 @@ const Modal = () => {
       const result = await fetch(`https://api.themoviedb.org/3/movie/${params.id}?api_key=7143b8ade453058bf9abca487c08038d&append_to_response=videos
       `)
       const data = await result.json()
-      // console.log(data)
+      // console.log(data.vote_average)
+      // console.log(typeof(result?.vote_average));
       // let value = data.videos.results.map((item)=>
       // console.log(item.key))
      
@@ -27,12 +28,13 @@ const Modal = () => {
       <div className='absolute lg:w-[100px] md:w-[100px] sm:w-0  min-h-screen bg-gradient-to-r from-black '></div>
        <img className=' lg:w-2/6 object-cover  md:w-2/5' src={`https://image.tmdb.org/t/p/original/${item?.poster_path}`}></img>
        <div className='flex flex-col gap-10'>
-       <h1 className='text-white font-bold text-[50px] '>{item?.original_title}</h1>
-       <h1 className='text-white font-bold italic'>{item?.tagline}</h1>
-       <h1 className='text-white font-bold '>Release-Date: {item?.release_date}</h1>
-       <p className='text-white w-[550px] md:w-[90%]'>{item?.overview}</p>
-       <h2 className='text-white '><b>VIDEO:</b> {videos?.name}</h2>
-       <iframe className='h-[90%] w-[90%]' src={`https://www.youtube.com/embed/${videos?.key}`}></iframe>
+       <h1 className='text-white font-bold lg:ml-0 md:ml-0 sm:ml-0 ml-14 text-[20px] lg:text-[50px] md:text-[50px] sm:text-[50px] '>{item?.original_title}</h1>
+       <h1 className='text-white font-bold italic lg:ml-0 md:ml-0 sm:ml-0  ml-14'>{item?.tagline}</h1>
+       <h1 className='text-white font-bold ml-14 lg:ml-0 md:ml-0 sm:ml-0 '>Release-Date: {item?.release_date}</h1>
+       <p className='text-white font-bold ml-14 lg:ml-0 md:ml-0 sm:ml-0 '>Ratings: {item?.vote_average}</p>
+       <p className='text-white w-90% lg:w-[90%] lg:ml-0 md:ml-0 sm:ml-0  ml-14 sm:w-[90%] md:w-[90%]'>{item?.overview}</p>
+       <h2 className='text-white  lg:ml-0 md:ml-0 sm:ml-0  ml-14'><b>VIDEO:</b> {videos?.name}</h2>
+       <iframe className='lg:ml-0 md:ml-0 sm:ml-0  ml-8' src={`https://www.youtube.com/embed/${videos?.key}`}></iframe>
 
        </div>
  

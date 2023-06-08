@@ -31,7 +31,7 @@ const Rows = ({id,fetchUrl,title,rowId}) => {
   return (
     <>
     <h2 className='ml-24 font-bold text-white'>{title}</h2>
-     <div className='ml-24 relative flex items-center group'>
+     <div className='ml-12 lg:ml-24 md:ml-24 sm:ml-24 relative flex items-center group'>
       
       <MdChevronLeft onClick={scrollLeft} className='bg-white left-0 rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block' size={40}/>
      
