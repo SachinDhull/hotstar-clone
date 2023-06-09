@@ -34,7 +34,7 @@ const Modal = () => {
        <p className='text-white font-bold ml-14 lg:ml-0 md:ml-0 sm:ml-0 '>Ratings: {item?.vote_average}</p>
        <p className='text-white w-90% lg:w-[90%] lg:ml-0 md:ml-0 sm:ml-0  ml-14 sm:w-[90%] md:w-[90%]'>{item?.overview}</p>
        <h2 className='text-white  lg:ml-0 md:ml-0 sm:ml-0  ml-14'><b>VIDEO:</b> {videos?.name}</h2>
-       <iframe className='lg:ml-0 md:ml-0 sm:ml-0  ml-8' src={`https://www.youtube.com/embed/${videos?.key}`}></iframe>
+       <iframe className='lg:ml-0 md:ml-0 sm:ml-0  ml-8 w-[90%] h-[100%]' src={`https://www.youtube.com/embed/${videos?.key}`}></iframe>
 
        </div>
  

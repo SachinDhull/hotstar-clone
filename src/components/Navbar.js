@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {AiFillHome} from 'react-icons/ai'
 import {BiSearch} from 'react-icons/bi'
+import { hover } from '@testing-library/user-event/dist/hover'
 
 const Navbar = () => {
     const navigate = useNavigate()
